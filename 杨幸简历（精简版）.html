@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨幸 | 个人简介</title>
+    <style>
+        :root {
+            --primary: #1e56a0;
+            --secondary: #163172;
+            --accent: #f6b93b;
+            --light: #f5f5f5;
+            --dark: #333;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        .container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            background: #fff; box-shadow: 0 5px 25px var(--shadow); border-radius: 8px;
+        }
+
+        header { padding: 20px 0; border-bottom: 2px solid var(--primary); margin-bottom: 25px; }
+
+        h1 { color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; }
+
+        h2 { color: var(--secondary); font-size: 1.5rem; font-weight: 500; margin-bottom: 15px; }
+
+        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
+        .tag { background-color: var(--primary); color:#fff; padding:5px 12px; border-radius:20px; font-size:.9rem; }
+
+        .mentor { font-style: italic; color: var(--secondary); margin-bottom: 15px; }
+
+        .roles { margin: 15px 0; font-weight: 500; }
+
+        .summary {
+            background:#f8f9fa; padding:15px; border-left:4px solid var(--accent);
+            margin:20px 0; border-radius:0 8px 8px 0;
+        }
+
+        .divider { height:2px; background:linear-gradient(to right,var(--primary),transparent); margin:30px 0 20px; }
+
+        .section { margin-bottom:30px; }
+
+        .section-title { display:flex; align-items:center; margin-bottom:15px; color:var(--primary); }
+        .section-title i { margin-right:10px; font-size:1.4rem; }
+
+        .project {
+            background:#f8f9fa; padding:15px; border-radius:8px; margin-bottom:20px;
+            box-shadow:0 3px 10px var(--shadow);
+        }
+
+        .project-title { color:var(--secondary); font-size:1.3rem; margin-bottom:10px; display:flex; align-items:center; }
+        .project-title i{ margin-right:8px; color:var(--accent); }
+
+        .evidence {
+            background:rgba(30,86,160,.1); padding:12px; border-radius:6px;
+            margin-top:10px; border-left:3px solid var(--primary);
+        }
+
+        .timeline { margin:20px 0; }
+        .timeline-item { display:flex; margin-bottom:15px; }
+        .timeline-date { width:180px; font-weight:bold; color:var(--primary); }
+        .timeline-content { flex:1; }
+
+        .skills { display:flex; flex-wrap:wrap; gap:10px; margin-top:15px; }
+        .skill {
+            background:rgba(30,86,160,.1); padding:8px 15px; border-radius:20px; font-size:.9rem;
+        }
+
+        table { width:100%; border-collapse:collapse; margin:20px 0; }
+        th,td { padding:12px; text-align:left; border-bottom:1px solid #ddd; }
+        th { background:var(--primary); color:#fff; }
+        tr:nth-child(even){ background:#f8f9fa; }
+
+        /* 图标圆点 */
+        .icon {
+            display:inline-block; width:24px; height:24px; text-align:center; line-height:24px;
+            background:var(--primary); color:#fff; border-radius:50%; margin-right:8px;
+            font-weight:bold; font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- 个人信息 -->
+        <header>
+            <h1>杨幸</h1>
+            <h2>浙江大学马克思主义学院&nbsp;博士研究生</h2>
+
+            <div class="tag-container">
+                <div class="tag">心理学本硕</div>
+                <div class="tag">思想政治教育专业博士在读</div>
+            </div>
+
+            <p class="mentor">
+                博导：马建青（二级教授 / 博导）<br>
+                国家万人计划教学名师&nbsp;|&nbsp;国务院政府特殊津贴专家
+            </p>
+        </header>
+
+        <!-- 个人简介 -->
+        <div class="roles">
+            <strong>个人简介：</strong>
+            <ul style="list-style-type:none; padding-left:0; margin-top:10px;">
+                <li>• 全国首部《大学生心理健康教育教程》数字教材副主编｜强鹰2025机器人班入围者</li>
+                <li>• “浙大·AI思政课一点通”“浙大·AI心理一点通”核心开发者</li>
+                <li>• “陈行甲AI心理医生”项目核心协作者｜“齐家AI”智能向善志愿网络开发成员</li>
+                <li>• 受邀在浙江科技大学、贵州都匀市政府等单位开展专题讲授</li>
+            </ul>
+        </div>
+
+        <!-- 研究方向总结 -->
+        <div class="summary">
+            专注于生成式人工智能在思想政治教育、心理健康、家庭育儿与教育技术融合领域的交叉应用，
+            具备从大模型微调、RAG 架构设计、智能体开发到 Prompt 工程的完整技术体系，
+            特别擅长教育场景需求建模、智能体搭建、知识图谱组织与对话风格调优，主导项目“教育场景落地”与“可视化 AI 产品设计”。
+        </div>
+
+        <!-- 成果 -->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="section-title"><span class="icon">📘</span><h3>重大成果与职责担当</h3></div>
+
+            <p>
+                全国首部《大学生心理健康教育教程》数字教材副主编，承担 AI 交互系统、心理测评数据结构、
+                数字人生成及 AIGC 正念引导视频等开发工作，推动教材智能化转型，被列为全国高校教材数字化升级样板。
+            </p>
+            <div class="evidence"><span class="icon">🔹</span>
+                <strong>可提供证明材料：</strong>教材封面、AI 功能截图、AIGC 正念引导视频片段、教材 2 分钟展示视频
+            </div>
+        </div>
+
+        <!-- 项目 -->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="section-title"><span class="icon">🔧</span><h3>主导项目实践与平台化应用</h3></div>
+
+            <div class="project">
+                <div class="project-title"><span class="icon">🔹</span><h4>《浙大·AI思政课一点通》</h4></div>
+                <p>
+                    全国首个基于思想政治教育大模型的智能体型产品，已在浙江大学等十余所高校落地，
+                    累计使用超 38,000 次，覆盖助学、助教、助研、助心四大场景；
+                    入选浙江大学 “AI for Education” 重点项目。
+                </p>
+                <div class="evidence"><span class="icon">🔹</span>
+                    <strong>可提供证明材料：</strong>开发时间轴图、项目主视觉海报、双二维码页（产品入口码 / 功能说明码）
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title"><span class="icon">🔹</span><h4>《浙大·AI心理一点通》</h4></div>
+                <p>
+                    面向心理健康领域的垂直大模型智能体，已在百度、浙大先生等平台部署，
+                    支持心理危机识别、SFBT 辅导流程模拟，具备完整知识库、记忆变量与对话追踪能力。
+                </p>
+                <div class="evidence"><span class="icon">🔹</span>
+                    <strong>可提供证明材料：</strong>产品入口二维码、主界面截图、心理危机调度流程图
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title"><span class="icon">🔹</span><h4>《陈行甲AI心理医生》</h4></div>
+                <p>
+                    担任核心技术协作者，负责语料质量评价、提示词策略设计与多轮风格微调，
+                    项目致力于构建公益、免费、开源的家庭心理 AI 体系。
+                </p>
+                <div class="evidence"><span class="icon">🔹</span>
+                    <strong>可提供证明材料：</strong>闭门攻坚合影、志愿网络队长截图、“认知盈余”理念宣传图
+                </div>
+            </div>
+        </div>
+
+        <!-- 历程 -->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="section-title"><span class="icon">📊</span><h3>发展历程与平台认可</h3></div>
+
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-date">2023.02 — 2024.04</div>
+                    <div class="timeline-content">完成全国首套 AI+心理健康数字教材研发，发布首个 LLM+RAG 心理咨询智能体</div></div>
+                <div class="timeline-item"><div class="timeline-date">2023.12 — 2024.03</div>
+                    <div class="timeline-content">“AI思政课一点通”入选浙江大学首批 “AI for Education” 重点项目（170 申请 / 16 立项，其中重点 8 项）</div></div>
+                <div class="timeline-item"><div class="timeline-date">2024.09</div>
+                    <div class="timeline-content">3.0 版系统部署至浙江大学等多所高校</div></div>
+                <div class="timeline-item"><div class="timeline-date">2025.02</div>
+                    <div class="timeline-content">项目纳入 “学在浙大” 平台，对 827 所高校免费开放</div></div>
+                <div class="timeline-item"><div class="timeline-date">2025.03</div>
+                    <div class="timeline-content">完成 4 场全国学术会议报告、13 场高校专题授课与 1 场地方政府介绍，部属高校官方宣发平台报道12次</div></div>
+            </div>
+
+            <div class="evidence"><span class="icon">🔹</span>
+                <strong>可提供证明材料：</strong>发展历程图、媒体报道合集、授课与报告现场照片
+            </div>
+        </div>
+
+        <!-- 技术优势 -->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="section-title"><span class="icon">🔬</span><h3>其他技术优势与团队背景</h3></div>
+            <div class="skills">
+                <div class="skill">擅长 AIGC 数字人生成、教学视频创作与编辑</div>
+                <div class="skill">心理学 + 政治学 + 教育学 交叉背景，熟悉 CBT &amp; SFBT 模型 AI 建模</div>
+                <div class="skill">团队由马建青教授指导，深度参与教材与 AI 交互系统设计</div>
+            </div>
+        </div>
+
+        <!-- 材料清单 -->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="section-title"><span class="icon">📎</span><h3>相关证明材料一览</h3></div>
+
+            <table>
+                <thead><tr><th>模块</th><th>名称</th><th>说明 / 链接</th></tr></thead>
+                <tbody>
+                    <tr><td>教材展示</td><td>大学生心理健康教育教程介绍片.mp4</td>
+                        <td>https://mp.weixin.qq.com/s/xUCfy6Q6l9oQAjh9yG-8AQ</td></tr>
+                    <tr><td>心理产品</td><td>浙大·AI心理一点通入口码.png</td>
+                        <td>网页版（内测2.0版本）：https://appbuilder.bce.baidu.com/ai_apaas/share/home?short_code=Fu5W7RmrV8g&source=web</td></tr>
+                    <tr><td>思政产品</td><td>浙大·AI思政课一点通主海报.png</td>
+                        <td>网页版（最新4.0版本）：https://appbuilder.baidu.com/s/qgbCoWB5</td></tr>
+                    <tr><td>思政产品</td><td>AI思政课一点通功能说明二维码.png</td>
+                        <td>https://mp.weixin.qq.com/s/WNxxce2OUFOmBiDzEFxWGg
+https://nicolazinx.github.io/</td></tr>
+                    <tr><td>代表项目</td><td>陈行甲AI心理医生·合影.png</td>
+                        <td>https://mp.weixin.qq.com/s/b5IuYut652TlvLmTgL_VSA</td></tr>
+                    <tr><td>媒体合集</td><td>讲座项目媒体报道封面集.png</td>
+                        <td>多场党课、AI 科普与培训报道（高校、街道、政府、国央企）https://mp.weixin.qq.com/s/Gk9NAdyIuVkCY0GaOTzy8A
+https://mp.weixin.qq.com/s/HgG7fvp7UK-wRqhCTZ8w5Q
+https://mp.weixin.qq.com/s/p8jZi1feNg8ZyZWUv2IYzQ
+https://mp.weixin.qq.com/s/rHU3cxlx3eWsFrbjesuxLA
+https://mp.weixin.qq.com/s/pTEe01OOZ3fTvosIXuKg6g
+https://mp.weixin.qq.com/s/YiQh9fBf5bIIJS98-be_FA
+</td></tr>
+                    <tr><td>项目历程</td><td>入围强鹰 2025 机器人班.png</td>
+                        <td>入围强鹰 2025 机器人班 https://mp.weixin.qq.com/s/fKz-DCkmW9Fb2xciHbwe_w</td></tr>
+ <tr><td>项目历程</td><td>AI 项目时间轴图.png</td>
+                        <td></td></tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

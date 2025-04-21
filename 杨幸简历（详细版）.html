@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨幸 | 个人简介</title>
+    <style>
+        :root {
+            --primary: #1e56a0;
+            --secondary: #163172;
+            --accent: #f6b93b;
+            --light: #f5f5f5;
+            --dark: #333;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 5px 25px var(--shadow);
+            border-radius: 8px;
+        }
+        
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        .profile-info {
+            flex: 2;
+        }
+        
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .tag {
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .mentor {
+            font-style: italic;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .roles {
+            margin: 15px 0;
+            font-weight: 500;
+        }
+        
+        .summary {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), transparent);
+            margin: 30px 0 20px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .project {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+        
+        .project-title {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .project-title i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        
+        .evidence {
+            background-color: rgba(30, 86, 160, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .timeline {
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-date {
+            width: 180px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill {
+            background-color: rgba(30, 86, 160, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .material-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .material-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+        
+        .material-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+        
+        .qr-placeholder {
+            width: 80px;
+            height: 80px;
+            background-color: #eee;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column-reverse;
+            }
+            
+            .profile-image {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-date {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            .material-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 图标集 */
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <h1>杨幸</h1>
+                <h2>浙江大学马克思主义学院 博士研究生</h2>
+                
+                <div class="tag-container">
+                    <div class="tag">心理学本硕</div>
+                    <div class="tag">思想政治教育专业博士在读</div>
+                </div>
+                
+                <div class="mentor">
+                    博导：马建青（二级教授/博导）<br>
+                    国家万人计划教学名师 国务院政府特殊津贴专家
+                </div>
+            </div>
+            
+            <div class="profile-image">
+                <div class="profile-avatar">杨</div>
+            </div>
+        </header>
+        
+        <div class="roles">
+            <strong>个人简介：</strong>
+            <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                <li>• 全国首部《大学生心理健康教育教程》数字教材副主编｜强鹰2025机器人班入围者</li>
+                <li>• "AI思政课一点通" "AI心理一点通" 项目 核心开发者</li>
+                <li>• 浙江科技大学、厦门医学院等单位邀约讲授者｜贵州都匀市政府招商引资政策实践意向合作｜"陈行甲AI心理医生" 智能向善志愿网络“齐家AI”开发成员</li>
+            </ul>
+        </div>
+        
+        <div class="summary">
+            专注于生成式人工智能在思想政治教育、心理健康、家庭育儿与教育技术融合领域的交叉应用，具备从大模型微调、RAG架构设计、智能体开发到Prompt工程的完整技术体系，兼具教学产品设计与实景落地经验。特别擅长教育场景需求建模、知识图谱组织与对话风格调优，主担任项目"教育场景落地"与"可视化AI产品设计"开发者、负责人。
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">📘</span>
+                <h3>重大成果与职责担当</h3>
+            </div>
+            
+            <p>全国首部《大学生心理健康教育教程》数字教材副主编，独立承担AI交互系统、心理测评数据结构、小游戏开发、数字人生成与AIGC视频正念引导等内容开发，是该教材智能化转型的关键实操者之一。该数字教材拟被列为全国高校教材数字化升级样板。</p>
+            
+            <div class="evidence">
+                <span class="icon">🔹</span> <strong>可提供证明材料：</strong>教材封面 + AI功能截图 + AIGC正念引导视频片段 + 教材2分钟展示视频 </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">🔧</span>
+                <h3>主导项目实践与平台化应用</h3>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">
+                    <span class="icon">🔹</span>
+                    <h4>《浙大·AI思政课一点通》</h4>
+                </div>
+                <p>全国首个基于思想政治教育领域大模型的智能体型产品，已在浙江大学等十余所高校落地，2024.09公开上线并免费使用，累计用户量4500+人，使用量超38,000次。覆盖助学、助教、助研、助心四大场景，功能包含：一键备课、政策解读、课堂互动、作业智能评分、学生心理辅助等，入选浙江大学"AI for Education"重点项目、典型案例。</p>
+                
+                <div class="evidence">
+                    <span class="icon">🔹</span> <strong>可提供证明材料：</strong>开发时间轴图、项目主海报、双二维码页（产品入口码、功能说明码）
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">
+                    <span class="icon">🔹</span>
+                    <h4>《浙大·AI心理一点通》</h4>
+                </div>
+                <p>面向心理健康领域构建的垂直大模型智能体，已在百度、浙大先生多平台部署，支持心理危机识别、共情对话风格调节、SFBT辅导流程模拟与咨询式AI交互，提供高可信度心理支持解决方案。具备完整知识库、记忆变量与对话多轮追踪能力。</p>
+                
+                <div class="evidence">
+                    <span class="icon">🔹</span> <strong>可提供证明材料：</strong>产品使用二维码、主界面截图、心理危机调度流程图
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">
+                    <span class="icon">🔹</span>
+                    <h4>《陈行甲AI心理医生》</h4>
+                </div>
+                <p>担任核心技术协作者，参与语料质量评价、提示词策略设计、专家知识萃取与多轮风格微调。项目由中电西湖区智能向善网络与全国知名公益领袖陈行甲、赵翼（知名企业家）共同发起，致力于构建公益、免费、开源的家庭心理AI体系。</p>
+                
+                <div class="evidence">
+                    <span class="icon">🔹</span> <strong>可提供证明材料：</strong>闭门攻坚合影（与赵翼）、志愿者网络组织担任队长截图、"认知盈余"理念宣传图
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">📊</span>
+                <h3>发展历程与平台认可</h3>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023年2月--2024年4月</div>
+                    <div class="timeline-content">完成全国首套AI+心理健康数字教材研发，发布全国首个LLM+RAG心理咨询问答机器人（助教）</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023年12月--2024年3月</div>
+                    <div class="timeline-content">主导"AI思政课一点通"入选浙江大学首批"AI for Education"教育改革重点项目（170 +申请 / 16 立项，其中重点 8 项）</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024年9月</div>
+                    <div class="timeline-content">完成3.0版系统部署，试用落地浙江大学、浙江万里学院、浙江科技大学、厦门医学院、新疆多所大学等</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025年2月</div>
+                    <div class="timeline-content">项目纳入"学在浙大"平台，对800+所高校免费开放</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025年3月</div>
+                    <div class="timeline-content">已完成全国学术会议发言/报告4场，高校专题授课13场，政府单位介绍1场，获多方媒体报道，含部级高校官推12篇（截至2025年4月）</div>
+                </div>
+            </div>
+            
+            <div class="evidence">
+                <span class="icon">🔹</span> <strong>可提供证明材料：</strong>发展历程图、媒体报道合集截图、会议讲座、项目介绍现场照片、课程邀约等
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">🔬</span>
+                <h3>技术优势与团队背景</h3>
+            </div>
+            
+            <div class="skills">
+                <div class="skill">精通AIGC数字人生成、视频类教学素材创作与编辑，主持开发的AI数字人"乐乐"已应用于多所小学及中学AI教育启蒙课程精品成果展示，举办“AI+考古”个展，AIGC视频成果获浙大本科生院院长、原计算机学院院长、AI专家吴飞教授肯定</div>
+                <div class="skill">具备心理、政治、教育三重知识背景，熟悉CBT、SFBT等心理干预模型的Agent开发路径</div>
+                <div class="skill">团队由浙江大学马建青教授指导，长期参与心理健康课程、教材、AI交互系统一体化设计与测试</div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">📎</span>
+                <h3>相关证明材料一览（可选供）</h3>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>模块</th>
+                        <th>名称</th>
+                        <th>相关文件</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>教材展示</td>
+                        <td>大学生心理健康教育教程介绍片.mp4 </td>
+                        <td>相关新闻：https://mp.weixin.qq.com/s/xUCfy6Q6l9oQAjh9yG-8AQ
+https://zjupsyebook.godaddysites.com/</td>
+
+                    </tr>
+                    <tr>
+                        <td>心理产品</td>
+                        <td>浙大·AI心理一点通使用入口码.png</td>
+                        <td>二维码（可供内测，开发中，还未完全对外开放）</td>
+                    </tr>
+                    <tr>
+                        <td>思政产品</td>
+                        <td>AI思政课一点通产品主海报.png</td>
+ <td>AI应用「思政课一点通」网页版：https://appbuilder.baidu.com/s/qgbCoWB5<td>
+       
+  
+                    </tr>
+                    <tr>
+                        <td>思政产品</td>
+                        <td>AI思政课功能展示说明二维码.png</td>
+                        <td>相关新闻：https://mp.weixin.qq.com/s/WNxxce2OUFOmBiDzEFxWGg<td>
+                    </tr>
+                    <tr>
+                        <td>代表项目</td>
+                        <td>陈行甲AI心理医生·技术攻坚闭门会合影.png</td>
+                        <td>相关新闻：https://mp.weixin.qq.com/s/b5IuYut652TlvLmTgL_VSA</td>
+                    </tr>
+                    <tr>
+                        <td>媒体合集</td>
+                        <td>讲座及项目媒体报道封面集.png</td>
+                        <td>补充案例举例：面向2025年3月都匀市政府招商工作组介绍“AI思政课一点通”开发及落地经验，受到积极评价，政府方有采购意向；担任多场AI科普、新质生产力宣讲；面向蒋村街道、余杭区、秦山核电站等政府及国央企开展专题党课、宣讲培训课及定制化培训课程授课；AI普及、AIGC内容创作培训讲师，擅长向教育机构与政府用户讲授AI原理与实操</td>
+                    </tr>
+                    <tr>
+                        <td>项目历程</td>
+                        <td>AI项目发展时间轴图.png</td>
+                       <td>入围强鹰2025机器人班 | 浙大党委副书记、机器人研究院院长朱世强导师组开展面试 https://mp.weixin.qq.com/s/fKz-DCkmW9Fb2xciHbwe_w</td>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>模块</th>
+            <th>名称</th>
+            <th>相关文件</th>
+            <th>图片预览</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>思政产品</td>
+            <td>AI思政课功能说明二维码</td>
+            <td>相关新闻：https://mp.weixin.qq.com/s/WNxxce2OUFOmBiDzEFxWGg</td>
+            <td><img src="AI思政课一点通功能说明二维码.png" alt="功能说明二维码" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>项目历程</td>
+            <td>项目时间轴图</td>
+            <td>时间轴展示</td>
+            <td><img src="AI项目时间轴图.png" alt="项目时间轴" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>代表项目</td>
+            <td>陈行甲AI心理医生项目合影</td>
+            <td>相关新闻：https://mp.weixin.qq.com/s/b5IuYut652TlvLmTgL_VSA</td>
+            <td><img src="陈行甲AI心理医生·合影.png" alt="项目合影" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>媒体合集</td>
+            <td>讲座及项目媒体报道封面集</td>
+            <td>多场讲座与报道汇总</td>
+            <td><img src="讲座项目媒体报道封面集.jpg" alt="媒体报道封面集" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>重要成果</td>
+            <td>强鹰2025机器人班入围证明</td>
+            <td>入围强鹰2025机器人班 | 浙大党委副书记、机器人研究院院长朱世强导师组开展面试</td>
+            <td><img src="入围强鹰2025机器人班.png" alt="入围证明" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>思政产品</td>
+            <td>AI思政课一点通主海报</td>
+            <td>AI应用「思政课一点通」网页版：https://appbuilder.baidu.com/s/qgbCoWB5</td>
+            <td><img src="浙大·AI思政课一点通主海报.png" alt="主海报" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>项目介绍</td>
+            <td>AI思政课一点通招商介绍</td>
+            <td>面向政府与机构的项目介绍材料</td>
+            <td><img src="浙大AI思政课一点通招商介绍.jpg" alt="招商介绍" style="max-width: 200px;"></td>
+        </tr>
+        <tr>
+            <td>心理产品</td>
+            <td>AI心理一点通入口码</td>
+            <td>二维码（可供内测，开发中，还未完全对外开放）</td>
+            <td><img src="浙大AI心理一点通入口码.png" alt="入口码" style="max-width: 200px;"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
